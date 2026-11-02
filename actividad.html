@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Actividad | Desafío creativo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-nav">
+    <nav class="container nav-inner" aria-label="Navegación principal">
+      <a class="brand" href="resumen.html"><span class="brand-mark"></span>Creatividad</a>
+      <ul class="nav-links">
+        <li><a href="resumen.html">Resumen</a></li>
+        <li><a class="active" href="actividad.html" aria-current="page">Actividad</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container hero">
+      <div>
+        <h1>Desafío creativo: ¿Qué tan creativo puedes ser?</h1>
+        <p>Demuestra lo que entendiste del libro y atrévete a combinar ideas para crear algo nuevo.</p>
+        <div class="btn-row">
+          <a class="btn" href="resumen.html">Volver al resumen</a>
+          <button class="btn btn-purple" id="reset-all" type="button">Reiniciar actividades</button>
+        </div>
+      </div>
+      <div class="orbit" aria-hidden="true">
+        <span class="ring-1"></span><span class="ring-2"></span><span class="ring-3"></span><span class="core"></span>
+      </div>
+    </section>
+
+    <!-- ACTIVIDAD 1 -->
+    <section class="section alt" id="actividad-1">
+      <div class="container">
+        <h2 class="section-title">Actividad 1: Pon a prueba tus conocimientos</h2>
+        <p class="section-lead">Responde las 5 preguntas y comprueba cuánto recuerdas del resumen.</p>
+        <div class="progress">
+          <div class="progress-label"><span id="progress-text">0 de 5 preguntas contestadas</span><span id="progress-pct">0%</span></div>
+          <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+        <div id="quiz"></div>
+        <div class="alert" id="quiz-alert" role="alert" hidden></div>
+        <div class="btn-row">
+          <button class="btn btn-primary" id="check-quiz" type="button">Comprobar respuestas</button>
+          <button class="btn" id="retry-quiz" type="button" hidden>Volver a intentar</button>
+        </div>
+        <div class="result-card" id="quiz-result" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <!-- ACTIVIDAD 2 -->
+    <section class="section" id="actividad-2">
+      <div class="container">
+        <h2 class="section-title">Actividad 2: Piensa diferente</h2>
+        <p class="section-lead">Un objeto, muchas posibilidades.</p>
+        <p class="challenge">Imagina que tienes una botella de plástico vacía. ¿Qué otros usos creativos podrías darle además de utilizarla para guardar líquidos?</p>
+        <label for="ideas-input" class="section-lead">Escribe todas las ideas que se te ocurran, una por línea.</label>
+        <textarea id="ideas-input" placeholder="Maceta, lámpara, alcancía..."></textarea>
+        <div class="alert" id="ideas-alert" role="alert" hidden></div>
+        <div class="btn-row"><button class="btn btn-primary" id="share-ideas" type="button">Compartir mis ideas</button></div>
+        <div class="output-card" id="ideas-output" hidden></div>
+      </div>
+    </section>
+
+    <!-- ACTIVIDAD 3 -->
+    <section class="section alt" id="actividad-3">
+      <div class="container">
+        <h2 class="section-title">Actividad 3: Combina ideas</h2>
+        <p class="section-lead">Crea algo imposible. La creatividad también consiste en combinar elementos que ya conocemos para crear algo diferente.</p>
+        <div class="elements">
+          <div class="element"><div class="shape clock"></div><strong>Un reloj</strong></div>
+          <div class="element"><div class="shape bike"></div><strong>Una bicicleta</strong></div>
+          <div class="element"><div class="shape ai"></div><strong>Una inteligencia artificial</strong></div>
+        </div>
+        <p class="challenge">Imagina que puedes combinar estos tres elementos para inventar un producto completamente nuevo. ¿Qué crearías y cómo funcionaría?</p>
+        <label for="invention-input" class="section-lead">Describe tu invento.</label>
+        <textarea class="big" id="invention-input" placeholder="Mi invento se llama... y funciona así..."></textarea>
+        <div class="alert" id="invention-alert" role="alert" hidden></div>
+        <div class="btn-row"><button class="btn btn-primary" id="present-invention" type="button">Presentar mi invento</button></div>
+        <div class="output-card" id="invention-output" hidden></div>
+      </div>
+    </section>
+
+    <div class="cta-wrap"><a class="btn" href="resumen.html">Regresar al resumen</a></div>
+  </main>
+
+  <footer class="footer"><div class="container">Desafío creativo: ¿Qué tan creativo puedes ser?</div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
